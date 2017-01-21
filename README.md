@@ -14,10 +14,11 @@ This includes index.js.flow to give type definition to flow.
 
 ## API
 
-- `match<T, U>(value)`
+- `match<T, U>(value: T): Match<T, U>`
 - Matcher
-  - `.case(v:)`
-  - `.if(func: (t: T) => boolean)`
+  - `.case(v: T): Match<T, U>`
+  - `.if(func: (t: T) => boolean): Match<T, U>`
+  - `.instanceof(klass: typeof Object): Match<T, U>`
 - `.then(next: () => U)`
 - `.end(): ?U`
 - `.default(next: () => U): U`
