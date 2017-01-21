@@ -1,3 +1,4 @@
+/* @flow */
 declare class Match$Resolved<T, U> {
   then(next: () => U): Match$Resolved<T, U>;
   default(next: () => U): U;
